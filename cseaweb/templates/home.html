@@ -70,6 +70,45 @@
   user-select: none;
 }
 
+.parallax {
+  /* The image used */
+  background-image: url('{% static 'images/i1.jpg' %}');
+  background-image: url('{% static 'images/i2.jpg' %}');
+  background-image: url('{% static 'images/i3.jpg' %}');
+  background-image: url('{% static 'images/i4.jpg' %}');
+  background-image: url('{% static 'images/i5.jpg' %}');
+  background-image: url('{% static 'images/i6.jpg' %}');
+  background-image: url('{% static 'images/i7.jpg' %}');
+  background-image: url('{% static 'images/i8.jpg' %}');
+  background-image: url('{% static 'images/i9.jpg' %}');
+  background-image: url('{% static 'images/i10.jpg' %}');
+  background-image: url('{% static 'images/i11.jpg' %}');
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.par{
+  background-image: url('{% static 'images/csea2019.jpg' %}');
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
 /* Position the "next button" to the right */
 .next {
   right: 0;
@@ -114,50 +153,60 @@
   from {opacity: .4}
   to {opacity: 1}
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+Active/Current Navigation Link
+Add an "active" class to the current link to let the user know which page he/she is on:
+
+HomeNewsContactAbout
+Example
+.active {
+  background-color: #4CAF50;
+}
     </style>
   </head>
   <body >
 
-    <div align="center"><img src="{% static 'images/logo.jpg' %}" width="250"><h1><b>Computer Science and Engineering Association NITW</b></h1> </div>
+    <div align="center"><img src="{% static 'images/logo.jpg' %}" width="220"><h1><b>Computer Science and Engineering Association NITW</b></h1> </div>
+    <ul >
+    <li><a class="active" href="http://127.0.0.1:8080/csea/home/">Home</a></li>
+    <li><a href="http://127.0.0.1:8080/csea/gallery/">Gallery</a></li>
+    <li><a href="http://127.0.0.1:8080/csea/events/">Events</a></li>
+    <li><a href="http://127.0.0.1:8080/csea/team/">Team</a></li>
+  </ul>
 
-   
-	  <div class="bg-top navbar-light"  >
-    	<div class="container">
-    		<div  class="row no-gutters d-flex align-items-center align-items-stretch">
-	    		<div class="col-lg-8 d-block">
-		    		<div class="row d-flex">
-					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-					    </div>
-					        
-					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-					    
-						    
-					    </div>
-					    
-				    </div>
-			    </div>
-		    </div>
-		  </div>
-    </div>
-	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div width="100%" class="container d-flex align-items-center px-4">
-				
-	      <div  class="collapse navbar-collapse" id="ftco-nav">
-	        <ul width="100%" align="center" class="navbar-nav mr-auto">
-	        	<li class="nav-item"><a href="http://127.0.0.1:8080/csea/home/" class="nav-link pl-0">Home</a></li>
-	        	<li class="nav-item"><a href="http://127.0.0.1:8080/csea/gallery/" class="nav-link">Gallery</a></li>
-	        	<li class="nav-item"><a href="http://127.0.0.1:8080/csea/events/" class="nav-link">Events</a></li>
-	        	<li class="nav-item"><a href="http://127.0.0.1:8080/csea/team/" class="nav-link">Team</a></li>
-	        	
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+    
+
+
     <!-- END nav -->
     
     
       
-      <div class="slideshow-container">
+      <div class="parallax" class="slideshow-container">
 
             <div class="mySlides fade">
             <img src="{% static 'images/i1.jpg' %}" style="width:100%">
@@ -214,8 +263,10 @@
     </div>
 
 
-
-     <img width="100%" height="600px" src="{% static 'images/csea2019.jpg' %}">
+    <div class="par">
+      <img width="100%" height="600px" src="{% static 'images/csea2019.jpg' %}">
+    </div>
+     
      	
     	
     <div align="center" class="ftco-footer ftco-bg-dark ftco-section"align="center" >
@@ -223,8 +274,8 @@
     </div>
 
 
-    <div class="clearfix">
-		  <div class="img-container">
+    <div class="clearfix"  class="parallax">
+		  <div class="img-container" >
 		  <img src="{% static 'images/i1.jpg' %}" style="width:100%" height="350px">
 		  </div>
 		  <div class="img-container" >
