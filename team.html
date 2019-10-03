@@ -1,0 +1,289 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSEA NITW</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css'}">
+    
+    <link rel="stylesheet" href="{% static 'css/flaticon.css'%}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+    <style type="text/css">
+		.img-container {
+		  float: left;
+		  width: 33.33%; /* three containers (use 25% for four, and 50% for two, etc) */
+		  padding: 5px; /* if you want space between the images */
+		}
+		.clearfix::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+
+		.na {
+		    width: 1000px;
+		}
+
+    .mySlides {
+      display: none;
+    }
+
+    .slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.par{
+  background-image: url('{% static 'images/csea2019.jpg' %}');
+  background-image: url('{% static 'images/csea2018.jpg' %}');
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+Active/Current Navigation Link
+Add an "active" class to the current link to let the user know which page he/she is on:
+
+HomeNewsContactAbout
+Example
+.active {
+  background-color: #4CAF50;
+}
+    </style>
+  </head>
+  <body >
+
+    
+
+    <div style="background-image: url('{% static 'images/back1.jpg' %}');"align="center">
+    <p><h1 style="color:black;"><b>Team 2019-20</b></h1></p>    
+  </div>
+
+    <div class="par" class="slideshow-container">
+
+            <div class="mySlides fade">
+            <img src="{% static 'images/csea2018.jpg' %}" style="width:100%">
+           
+            </div>
+
+          <div class="mySlides fade">
+           
+            <img src="{% static 'images/csea2019.jpg' %}" style="width:100%">
+            
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+      </div>
+      
+      
+    <script type="text/javascript">
+      
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 3000);
+      }
+    </script> 
+
+    <div align="center" class="ftco-footer ftco-bg-dark ftco-section"align="center" >
+    		<p><h3 style="color:orange;"><b>We are a group of dedicated,enthusiastic students who work timelessly to deliver the essence of Computer Science to everyone in our vicinity.</b></h3>
+
+
+        <p><h3 style="color:white;">Following is the Team for the year 2019-20</h3></p>
+
+        <img src="{% static 'images/theteam.png'%}">
+
+
+
+        
+    </div>
+    <p></p>		
+		
+	<div align="center">
+		
+		<footer text-align="center" class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Have Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text"> National Institute of Technology Campus, Hanamkonda, Telangana 506004, India</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 9515360944</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">csea@student.nitw.ac.in</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+          
+          <div align-text="center" class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5 ml-md-4">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="http://127.0.0.1:8080/csea/home/"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="http://127.0.0.1:8080/csea/gallery/"><span class="ion-ios-arrow-round-forward mr-2"></span>Gallery</a></li>
+                <li><a href="http://127.0.0.1:8080/csea/events/"><span class="ion-ios-arrow-round-forward mr-2"></span>Events</a></li>
+                <li><a href="http://127.0.0.1:8080/csea/team/"><span class="ion-ios-arrow-round-forward mr-2"></span>Team</a></li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
+            	<p></p>
+
+                <a href="https://www.facebook.com/cseanitw/"><img src="{% static 'images/fb.png' %}" width="50px"height="50px"></a>
+                &nbsp;
+                <a href="https://www.instagram.com/csea_nitw/?hl=en"><img src="{% static 'images/insta.png' %}" width="50px" height="50px"></a>
+                
+            </div>
+            
+          </div>
+
+          
+        </div>
+        
+     </footer>
+
+
+	</div>	
+    
+    
+  </body>
+</html>
